@@ -40,13 +40,16 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  config.include RSpec::Rails::RequestExampleGroup, type: :request, example_group: {
+    file_path: /spec\/api/
+  }
+
+
   config.include FactoryGirl::Syntax::Methods
   config.include JsonSpec::Helpers
-  RspecApiDocumentation.configure do |config|
-    config.format = :json
-    config.docs_dir = Rails.root.join("docs", "")
-  end
   Faker::Config.locale = 'en-us'
 
   config.include Rails.application.routes.url_helpers
 end
+
+require 'capybara/rspec'

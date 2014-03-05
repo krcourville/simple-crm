@@ -33,7 +33,8 @@ gem 'marionette-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+# gem 'jbuilder', '~> 1.2'
+gem 'grape'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -57,9 +58,11 @@ gem 'raddocs'
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails', '4.2.1'
-  gem 'rspec_api_documentation'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rubocop'
+  gem 'selenium-webdriver'
+  gem 'capybara'
 end
 
 group :test do
@@ -70,4 +73,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'shoulda-callback-matchers', '>=0.3.0'
   gem 'json_spec'
+
 end

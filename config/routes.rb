@@ -1,3 +1,5 @@
+require 'api'
+
 Crm::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -54,13 +56,7 @@ Crm::Application.routes.draw do
   #     resources :products
   #   end
   resources :home, only: [:index]
+  mount API => '/'
   root :to=> "home#index"
 
-  namespace :api, defaults: {format: :json} do  
-    scope module: :v1, constraints: ApiConstaints.new(version: 1, default: :true) do
-      
-      resources :contact
-
-    end
-  end
 end
