@@ -55,4 +55,12 @@ Crm::Application.routes.draw do
   #   end
   resources :home, only: [:index]
   root :to=> "home#index"
+
+  namespace :api, defaults: {format: :json} do  
+    scope module: :v1, constraints: ApiConstaints.new(version: 1, default: :true) do
+      
+      resources :contact
+
+    end
+  end
 end

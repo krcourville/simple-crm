@@ -41,4 +41,12 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include FactoryGirl::Syntax::Methods
+  config.include JsonSpec::Helpers
+  RspecApiDocumentation.configure do |config|
+    config.format = :json
+    config.docs_dir = Rails.root.join("docs", "")
+  end
+  Faker::Config.locale = 'en-us'
+
+  config.include Rails.application.routes.url_helpers
 end
