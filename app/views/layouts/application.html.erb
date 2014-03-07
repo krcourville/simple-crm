@@ -9,20 +9,19 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#"><i class="icon-globe"></i>&nbsp;SIMPLE CRM</a>
-          <div class="navbar-content">
-            <ul class="nav  pull-right"></ul>
-          </div>
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+          <i class="glyphicon glyphicon-book"></i>
+          Simple CRM</a>
         </div>
+        
       </div>
     </div>
 
-    <div class="container-narrow">
-        <%= bootstrap_flash %>
-        
+    <div class="container">        
+        <div id="main"></div>
     </div>
 
     <%= javascript_include_tag "application" %>

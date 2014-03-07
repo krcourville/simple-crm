@@ -11,8 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
+//= require handlebars.runtime
+//= require_tree ./app/templates
 //= require backbone-rails
 //= require backbone.marionette
 //= require_tree .
+
+$(function(){
+	CrmApp.start();
+});
