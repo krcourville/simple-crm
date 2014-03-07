@@ -1,5 +1,7 @@
-class API < Grape::API
+module CRM
+	class API < Grape::API
 	prefix 'api'
 	mount CRM::Ping
 	mount CRM::ContactApi
+	end	
 end
