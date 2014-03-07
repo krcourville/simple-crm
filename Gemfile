@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'rails', '4.0.1'
 gem 'thin'
-gem 'sqlite3'
+
 
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -57,6 +58,7 @@ end
 gem 'raddocs'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'better_errors'
