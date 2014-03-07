@@ -2,6 +2,8 @@
 
 A simple CRM built with Ruby on Rails using Grape for a JSON API and a Backbone-based client.
 
+Live Url: http://kc-simple-crm.herokuapp.com/
+
 * Ruby version: 1.3.3
 
 * System dependencies
