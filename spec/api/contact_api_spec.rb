@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CRM::ContactApi do
+describe ContactApi do
 	describe "GET /api/contacts" do
 		it "returns an empty array of contacts" do
 			get "/api/contacts"
